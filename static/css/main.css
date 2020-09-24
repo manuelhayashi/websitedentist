@@ -22,9 +22,6 @@ body, footer {
   font-family: "Comic", sans-serif, cursive;
 }
 
-.text-header {
-  color: white;
-}
 
 /* ------------- Nav Bar Formatting ------------------ */
 .bg-img {
@@ -200,7 +197,18 @@ label.logo {
 
 
 /* ------------------ contact from -----------------*/
-
+.form-s1 {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  /* border: 2px solid lightblue; */
+}
+.form-text-header {
+  color: white;
+  text-align: center;
+}
 /* child */
 .col {
  display: flex;
@@ -242,6 +250,7 @@ label.logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* border: 2px solid lightblue; */
 }
 h3.home-text-header {
   margin: 20px;

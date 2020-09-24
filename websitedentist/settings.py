@@ -124,7 +124,7 @@ django_heroku.settings(locals())
 #email settings
 EMAIL_HOST = 'localhost'
 EMAIL_PORT ='1025'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = 'manny.hayashi@gmail.com'
+EMAIL_HOST_PASSWORD = 'choapas74'
 EMAIL_USE_TLS = False
 # EMAIL_USE_SSL = False

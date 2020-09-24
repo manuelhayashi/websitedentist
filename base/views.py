@@ -8,18 +8,19 @@ def Main(request):
 
 def Contact(request):
     if request.method == "POST":
-        message_name = request.POST['message-name']
+        message_fname = request.POST['message-fname']
+        message_lname = request.POST['message-lname']
         message_email = request.POST['message-email']
         message = request.POST['message']
 
         #send email
-        # send_mail
-        #     'message_name', # subject
+        # send_mail(
+        #     message_name, # subject
         #     message, # message
         #     message_email, # from email
-        #     ['manuelhayashi@icloud.com'], # to email
+        #     ['manuel.hayashi@icloud.com'], # to email
         #     )
-        context = {'message_name': message_name}
-        return render(request, 'home.html', context)
+        context = {'message_fname': message_fname}
+        return render(request, 'contact_form.html', context)
     else:
         return render(request, 'contact_form.html', {})

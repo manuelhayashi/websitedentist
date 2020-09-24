@@ -14,35 +14,41 @@
     {% include 'navbar.html' %}
 
     <!-- <iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1118.252761843653!2d-99.22176843716754!3d19.484054293084903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d202f0c0000001%3A0xe6157b2c54169912!2sPapeler%C3%ADa%20Acuario!5e0!3m2!1sen!2sus!4v1600750188058!5m2!1sen!2sus></iframe>" width="600" height="450"></iframe> -->
-      <div class="s1">
-        <div class="col">
-            <h3 class="text-header">Forma para contactar al dentista</h3>
-        </div>
+      <div class="form-s1">
+        {% if message_fname %}
+          <center><h3 class="form-text-header">Gracias {{message_fname}}! su mensaje ha sido enviado,</h3>
+          <br>
+          <center><h3 class="form-text-header">Tan pronto recibamos tu mensaje nos contactaremos con usted.</h3>
+        {% else %}
+          <div class="col">
+              <h3 class="form-text-header">Forma para contactar al dentista</h3>
+          </div>
 
-        <div class="col">
-          <form class="form" action="{% url 'home' %}" method="POST">
-            {% csrf_token %}
-            <div class="form-item">
-            <label for="message-fname" class="form-title">Nombre:</label>
-            <input type="text" name="message-fname" value="" size="25">
-            </div>
-            <div class="form-item">
-            <label for="message-lname" class="form-title">Apellido:</label>
-            <input type="text" name="message-lname" value="" size="25">
-            </div>
-            <div class="form-item">
-            <label for="message-email" class="form-title">Email:</label>
-            <input type="text" name="message-email" value="" size="25">
-            </div>
-            <div class="form-item">
-            <label for="message" class="form-title">Mensaje:</label>
-            <textarea name="message" cols="35" rows="6" value=""></textarea>
-            </div>
-            <div class="form-submit">
-            <input class="other" type="submit" name="submit">
-            </div>
-          </form>
-        </div>
+          <div class="col">
+            <form class="form" action="{% url 'contact' %}" method="POST">
+              {% csrf_token %}
+              <div class="form-item">
+              <label for="message-fname" class="form-title">Nombre:</label>
+              <input type="text" name="message-fname" value="" size="25">
+              </div>
+              <div class="form-item">
+              <label for="message-lname" class="form-title">Apellido:</label>
+              <input type="text" name="message-lname" value="" size="25">
+              </div>
+              <div class="form-item">
+              <label for="message-email" class="form-title">Email:</label>
+              <input type="text" name="message-email" value="" size="25">
+              </div>
+              <div class="form-item">
+              <label for="message" class="form-title">Mensaje:</label>
+              <textarea name="message" cols="35" rows="6" value=""></textarea>
+              </div>
+              <div class="form-submit">
+              <input class="other" type="submit" name="submit">
+              </div>
+            </form>
+          </div>
+        {% endif%}
       </div>
     </div>
   </body>
