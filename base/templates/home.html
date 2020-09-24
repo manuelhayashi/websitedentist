@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,17 +9,32 @@
 
   <body>
 
+    <div class="bg-img">
+
+      {% include 'navbar.html' %}
+      <div class="home-s1">
+        <div class="">
+          <h3 class="home-text-header">Bienvenidos a la Clinica Dental Los Pastores</h3>
+        </div>
+        <div class="">
+          <p class="home-text-header">Hemos estado trabajando con ustedes por mas de 40 anos,
+           estamos orgullosos de contar con su apoyo.</p>
+        </div>
+      </div>
 
 
-  {% include 'navbar.html' %}
 
-  {% block content %}
-    <!-- innclude all body calls from this page  -->
-  {% endblock %}
+
+
+
+
+
+
+    </div>
 
   </body>
 
   <footer>
-
+    {% include 'footer.html' %}
   </footer>
 </html>

@@ -1,10 +1,13 @@
-*{
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing:border-box;
-}
+* {     margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        text-decoration: none;
+        list-style: none;
+        /* background: transparent; */
+  }
+
 h1 { font-size: 56px;}
 h2 { font-size: 36px;}
 h3 { font-size: 28px;}
@@ -13,26 +16,77 @@ h5 { font-size: 20px;}
 h6 { font-size: 16px;}
 
 p, a {
-  font-size: 16px;
+  font-size: 18px;
 }
 label, input {
-  font-size: 16px;
+  font-size: 18px;
 }
 body, footer {
   font-family: "Comic", sans-serif, cursive;
 }
 
-.text-header {
-  color: white;
-}
 
-/* ------------- Nav Bar Formatting ------------------ */
+/* ------------------ body -----------------*/
+
+.s1 {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* make border all around to see space */
+
+  padding-left: 60px;
+  padding-right: 60px;
+}
+ /* ------------------ contact from -----------------*/
+
+ .text-header {
+   color: white;
+ }
+
+/* child */
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+  /* border: 1px solid red; */
+}
+.form {
+  border: 2px solid orange;
+  background-color: #A4AE9E;
+  width: 500px;
+  padding: 20px; /*padding inside the box*/
+  border-radius: 30px;}
+
+.form-item {
+  border-bottom: 1px solid #efefef;
+  margin: 20px;
+  padding-bottom: 10px;
+  width: 400px;}
+
+.form-title {
+  float: left;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;}
+
+.form-submit {
+  text-align: right;
+  padding-right: 60px;}
+
+
+
 .bg-img {
   background: url("/static/images/curette.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   height: calc(100vh - 80px);
 }
+
+/* ---------------- navigation bar ------------- */
+/* inline desktop navbar */
+/* Position container inside the image */
 .nav-cont {
   position: relative;
   padding-top: 20px;
@@ -97,13 +151,13 @@ label.logo {
   #mainMenu {
     position: absolute;
     width:100%;
-    height: 100vh;
+    height: 0vh;
     background: #2c3e50; /* background blue */
     top: 80px;
     left: -100%; /* this moved the menue to the left for hide */
     text-align: center;
     margin-top: 20px;
-    /* border: 3px solid yellow; */
+    border: 3px solid yellow;
   }
   #mainMenu li {
     display: block; /* vertical display of menu */
@@ -115,7 +169,7 @@ label.logo {
     padding: 7px 10px;
     margin: 7px 10px;
     border-radius: 4px;
-    /* border: 3px solid green; */
+    border: 3px solid green;
   }
   #mainMenu a:hover,
   #mainMenu a:active {
@@ -138,21 +192,6 @@ label.logo {
 		color: orange;
 	}
 
-  /* ------------label values bofore and after --------- */
-	/* #menuShowHide + label:before {
-		content:"Menub";
-	} */
-	/* #menuShowHide:checked + label:before {
-		content:"Menua"; */
-
-  #menuShowHide:checked {
-    margin:0;
-  }
-	#menuShowHide:checked ~ #mainMenu {
-    left: 0; /* this make the menu show up */
-		display:block;
-	}
-}
 
 
 /* ---------------------- footer formatting -----------------*/
@@ -179,7 +218,6 @@ label.logo {
   font-size: 14px;
   color: grey;
 }
-
 /* -------------- Formatting Buttons ----------- */
 .other{
     background-color: #f1a340;
@@ -198,60 +236,53 @@ label.logo {
     border: 1px solid #f1a340;
 }
 
-
-/* ------------------ contact from -----------------*/
-
-/* child */
-.col {
- display: flex;
- justify-content: center;
- align-items: flex-start;
- margin-top: 40px;
- /* border: 1px solid red; */
-}
-.form {
-  border: 2px solid orange;
-  background-color: #A4AE9E;
-  width: 500px;
-  padding: 20px; /*padding inside the box*/
-  border-radius: 30px;
-}
-.form-item {
-  border-bottom: 1px solid #efefef;
-  margin: 20px;
-  padding-bottom: 10px;
-  width: 400px;
-  /* border: 3px solid red; */
-  display: flex;
-  align-items: flex-start;
-}
-.form-submit {
-  text-align: right;
-  padding-right: 60px;
-}
-.form-item label {
-  padding-right: 10px;
-  /* border: 3px solid yellow; */
+.new{
+    background-color: green;
+    color: white;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-/* --------------home page formatting-------------------- */
-.home-s1 {
-  /* border: 3px solid yellow; */
-  height: 600px;
-  /* padding: 200px 80px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.new:hover{
+    background-color: #e1e5f2;
+    color: green;
+    border: 1px solid green;
 }
-h3.home-text-header {
-  margin: 20px;
-  letter-spacing: 2px;
-  color: orange;
-  text-align: center;
+
+.update{
+    background-color: #00ccff;
+    color: #0066cc;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
 }
-p.home-text-header {
-  margin:20px;
-  letter-spacing: 2px;
-  color: orange;
-  text-align: center;
+
+.update:hover{
+    background-color: #e1e5f2;
+    color: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+.delete{
+    background-color: red;
+    color: white;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.delete:hover{
+    background-color: #e1e5f2;
+    color: red;
+    border: 1px solid red;
 }
